@@ -1,0 +1,50 @@
+{
+    "version": "1.0",
+    "configs": [
+        {
+            "product_name": "ruby",
+            "type": "main_test",
+            "path": "/odm/etc/cit_param_config_ruby.json"
+        },
+        {
+            "product_name": "rubyplus",
+            "type": "main_test",
+            "path": "/odm/etc/cit_param_config_rubyplus.json"
+        },
+        {
+            "product_name": "rubypro",
+            "type": "main_test",
+            "path": "/odm/etc/cit_param_config_rubypro.json"
+        },
+        {
+            "product_name": "ruby",
+            "type": "auxiliary_test",
+            "path": "/odm/etc/cit_param_config_ruby.json"
+        },
+        {
+            "product_name": "rubyplus",
+            "type": "auxiliary_test",
+            "path": "/odm/etc/cit_param_config_rubyplus.json"
+        },
+        {
+            "product_name": "rubypro",
+            "type": "auxiliary_test",
+            "path": "/odm/etc/cit_param_config_rubypro.json"
+        },
+        {
+            "product_name": "ruby",
+            "type": "auto_test",
+            "path": "/odm/etc/cit_param_config_ruby.json"
+        },
+        {
+            "product_name": "rubyplus",
+            "type": "auto_test",
+            "path": "/odm/etc/cit_param_config_rubyplus.json"
+        },
+        {
+            "product_name": "rubypro",
+            "type": "auto_test",
+            "path": "/odm/etc/cit_param_config_rubypro.json"
+        }
+    ]
+}

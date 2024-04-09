@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+listeners is a statues set,if corresponding position is 1, that mean reg this listener.
+    Now, contain the listener is:
+    receiver,wifi_spot,bluetooth,bluetooth_pan,sarsensor1,sarsensor2,mcc,wifi,cable,hall,usb
+    1: need to reg, 0 : don`t reg
+    like for J18 device, listeners that need to reg is:  11111111110
+    like for J3S device, listeners that need to reg is:  11111111100
+    like for J1/J2 device, listeners that need to reg is 11111011000
+dsiMap：
+    1. F mean NA,the other state is corresponding listener value.
+    2. wifi_spot,bluetooth,bluetooth_pan is one state: hotSpot.
+    receiver,hotSpot,sarsensor1,sarsensor2,mcc,wifi,cable,hall,usb
+    like for J18 device:
+        DSI1: 10FF1F00
+        DSI2: 10FF2F00,10FF3F00 == 10FF4F00
+        DSI3: 0020FF00
+        DSI4: 00102F00,00103F00 == 00104F00
+        an so on
+-->
+<SarDsiConfig>
+    <deviceSarConfig device_name="rubypro">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">GL</prop>
+        <prop prop_name="ro.product.mod_device">ruby_global</prop>
+        <!-- wifi,hotspot(1),modem,sarsensor(1),hall,audio(1),mcc,btpan(1),bt(1),sarsensor2(1),cable(1),usb,use,radiopower,sim,sarsensor3(1) -->
+        <listeners>0101010111000001</listeners>
+        <!-- hotspot,sarSensor audio -->
+        <dsimap value="0F1">0</dsimap>
+        <dsimap value="010">1</dsimap>
+        <dsimap value="000">3</dsimap>
+        <dsimap value="1FF">4</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <deviceSarConfig device_name="ruby">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">GL</prop>
+        <prop prop_name="ro.product.mod_device">ruby_global</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0101010111000001</listeners>
+        <!-- hotspot,sarSensor audio -->
+        <dsimap value="0F1">0</dsimap>
+        <dsimap value="010">1</dsimap>
+        <dsimap value="000">3</dsimap>
+        <dsimap value="1FF">4</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <!-- only use for IN -->
+    <deviceSarConfig device_name="rubypro">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">IN</prop>
+        <prop prop_name="ro.product.mod_device">ruby_in_global</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0000010000000000</listeners>
+        <!-- audio -->
+        <dsimap value="1">0</dsimap>
+        <dsimap value="0">1</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <deviceSarConfig device_name="ruby">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">IN</prop>
+        <prop prop_name="ro.product.mod_device">ruby_in_global</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0000010000000000</listeners>
+        <!-- audio -->
+        <dsimap value="1">0</dsimap>
+        <dsimap value="0">1</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <!-- only use for CN -->
+    <deviceSarConfig device_name="rubypro">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">CN</prop>
+        <prop prop_name="ro.product.mod_device">ruby</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0000010000000000</listeners>
+        <!-- audio -->
+        <dsimap value="1">0</dsimap>
+        <dsimap value="0">1</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <deviceSarConfig device_name="ruby">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">CN</prop>
+        <prop prop_name="ro.product.mod_device">ruby</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0000010000000000</listeners>
+        <!-- audio -->
+        <dsimap value="1">0</dsimap>
+        <dsimap value="0">1</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <!-- default configuration. -->
+    <deviceSarConfig device_name="rubypro">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">default</prop>
+        <prop prop_name="ro.product.mod_device">default</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0101010111000001</listeners>
+        <!-- hotspot,sarSensor audio -->
+        <dsimap value="0F1">0</dsimap>
+        <dsimap value="010">1</dsimap>
+        <dsimap value="000">3</dsimap>
+        <dsimap value="1FF">4</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+    <deviceSarConfig device_name="ruby">
+        <!-- <prop prop_name="persist.vendor.radio.dynamic_sar">1</prop> -->
+        <prop prop_name="ro.boot.hwc">default</prop>
+        <prop prop_name="ro.product.mod_device">default</prop>
+        <!-- wifi,hotspot,modem,sarsensor,hall,audio,mcc,btpan,bt,sarsensor2,cable,usb,use,radiopower,sim,sarsensor3 -->
+        <listeners>0101010111000001</listeners>
+        <!-- hotspot,sarSensor audio -->
+        <dsimap value="0F1">0</dsimap>
+        <dsimap value="010">1</dsimap>
+        <dsimap value="000">3</dsimap>
+        <dsimap value="1FF">4</dsimap>
+        <sensornums>15</sensornums>
+        <sensorgroup>03,14,25</sensorgroup>
+        <defaultgroup>6</defaultgroup>
+    </deviceSarConfig>
+</SarDsiConfig>
