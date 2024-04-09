@@ -1,0 +1,14 @@
+# missi_phone_global-user 14 UP1A.231005.007 V816.0.3.0.UMOMIXM release-keys
+- manufacturer: xiaomi
+- platform: mt6877
+- codename: ruby
+- flavor: missi_phone_global-user
+- release: 14
+- id: UP1A.231005.007
+- incremental: V816.0.3.0.UMOMIXM
+- tags: release-keys
+- fingerprint: Redmi/ruby_global/ruby:14/UP1A.230620.001/V816.0.3.0.UMOMIXM:user/release-keys
+- is_ab: true
+- brand: Redmi
+- branch: missi_phone_global-user-14-UP1A.231005.007-V816.0.3.0.UMOMIXM-release-keys
+- repo: redmi_ruby_dump
