@@ -1,0 +1,5 @@
+create mireuse_b
+linear 0       409600  /dev/block/by-name/md1img_b 0
+linear 409600  262144  /dev/block/by-name/boot_b 0
+linear 671744  131072  /dev/block/by-name/vendor_boot_b 0
+linear 802816  16384   /dev/block/by-name/audio_dsp_b 0
